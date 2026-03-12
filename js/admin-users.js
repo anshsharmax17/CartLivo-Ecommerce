@@ -1,7 +1,7 @@
 async function loadUsers() {
   const token = localStorage.getItem("authToken");
 
-  const res = await fetch("http://localhost:5000/api/admin/users", {
+  const res = await fetch("https://cartlivo-ecommerce.onrender.com", {
     headers: {
       Authorization: `Bearer ${token}`
     }
