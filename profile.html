@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CartLivo | User Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/profile.css" />
+  </head>
+  <body>
+    <!-- Shared navbar style matching app theme -->
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="logo" href="index.html">CartLivo</a>
+        <nav class="top-actions">
+          <a class="btn btn-ghost" href="dashboard.html">Dashboard</a>
+          <a class="btn btn-ghost" href="index.html">Shop</a>
+          <button id="logoutBtn" class="btn btn-danger" type="button">Logout</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page">
+      <section class="hero-card">
+        <p class="eyebrow">User Profile</p>
+        <h1>Manage your account details</h1>
+        <p class="subtext">Update your profile, shipping address, and password securely.</p>
+      </section>
+
+      <section class="profile-layout">
+        <!-- Profile identity panel -->
+        <aside class="panel profile-summary">
+          <div class="avatar" aria-hidden="true" id="avatarPlaceholder">U</div>
+          <h2 id="displayName">User Name</h2>
+          <p id="displayEmail">user@example.com</p>
+          <button id="logoutBtnSide" class="btn btn-danger btn-block" type="button">Logout</button>
+        </aside>
+
+        <!-- Editable profile details -->
+        <section class="panel">
+          <h2>Profile Information</h2>
+          <form id="profileForm" novalidate>
+            <div class="field">
+              <label for="fullName">Full Name</label>
+              <input id="fullName" type="text" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" required />
+            </div>
+            <button class="btn btn-primary" type="submit">Update Profile</button>
+          </form>
+
+          <h2 class="section-title">Address</h2>
+          <form id="addressForm" novalidate>
+            <div class="field">
+              <label for="addressLine">Address Line</label>
+              <input id="addressLine" type="text" placeholder="Flat / Street / Area" />
+            </div>
+            <div class="grid-2">
+              <div class="field">
+                <label for="city">City</label>
+                <input id="city" type="text" />
+              </div>
+              <div class="field">
+                <label for="postalCode">Postal Code</label>
+                <input id="postalCode" type="text" />
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Add / Edit Address</button>
+          </form>
+
+          <h2 class="section-title">Change Password</h2>
+          <form id="passwordForm" novalidate>
+            <div class="grid-2">
+              <div class="field">
+                <label for="newPassword">New Password</label>
+                <input id="newPassword" type="password" minlength="6" />
+              </div>
+              <div class="field">
+                <label for="confirmPassword">Confirm Password</label>
+                <input id="confirmPassword" type="password" minlength="6" />
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Change Password</button>
+          </form>
+
+          <p id="profileMessage" class="message" aria-live="polite"></p>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© 2026 CartLivo. All rights reserved.</p>
+        <p>Secure account • Fast shopping • Trusted delivery</p>
+      </div>
+    </footer>
+
+    <script src="js/profile.js"></script>
+  </body>
+</html>

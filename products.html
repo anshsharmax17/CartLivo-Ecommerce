@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CartLivo | Product Listing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style2.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="logo" href="#">CartLivo</a>
+        <div class="topbar-actions">
+          <a id="cartLink" class="btn btn-outline" href="cart.html">
+            Cart (<span id="cartCount">0</span>)
+          </a>
+          <a class="btn btn-outline" href="dashboard.html">Back to Home</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page">
+      <section class="page-header">
+        <p class="eyebrow">Product Listing</p>
+        <h1>Find products faster with search and smart filters</h1>
+        <p>
+          Browse curated products, filter by category and price, and quickly
+          discover what fits your budget and style.
+        </p>
+      </section>
+
+
+
+
+      <section class="controls" aria-label="Product filters">
+        <div class="search-wrap">
+          <label for="searchInput">Search products</label>
+          <input id="searchInput" type="search" placeholder="Try: earbuds, lamp, bag..." />
+        </div>
+
+        <div class="filter-wrap">
+          <label for="categoryFilter">Category</label>
+          <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="home">Home</option>
+            <option value="fitness">Fitness</option>
+            <option value="fashion">Fashion</option>
+          </select>
+        </div>
+
+        <div class="filter-wrap">
+          <label for="priceFilter">Price Range</label>
+          <select id="priceFilter">
+            <option value="all">All Prices</option>
+            <option value="0-50">$0 - $50</option>
+            <option value="51-100">$51 - $100</option>
+            <option value="101-150">$101 - $150</option>
+          </select>
+        </div>
+
+        <button id="resetFilters" class="btn btn-secondary" type="button">Reset Filters</button>
+      </section>
+
+      <!-- <section class="results-head">
+        <p id="resultCount">Showing 0 products</p>
+      </section> -->
+
+      <section id="productGrid" class="product-grid" 
+      <div class=""product-skeleton</div>      
+      <div class=""product-skeleton</div>      
+      <div class=""product-skeleton</div>      
+      <div class=""product-skeleton</div>      
+      <div class=""product-skeleton</div>      
+      <div class=""product-skeleton</div>            
+      Loading Please Wait...</section>
+
+      <p id="emptyState" class="empty-state" hidden>
+        No products match your search/filter. Try changing filter options.
+      </p>
+    </main>
+
+    <script src="js/products.js"></script>
+  </body>
+</html>

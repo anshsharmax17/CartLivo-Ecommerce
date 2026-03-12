@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CartLivo | User Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <!-- Top navigation (same visual language as other pages) -->
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="logo" href="index.html">CartLivo</a>
+        <nav class="top-actions">
+          <a class="btn btn-ghost" href="products.html">Shop</a>
+          <a class="btn btn-ghost" href="cart.html">Cart</a>
+          <a class="btn btn-ghost" href="order-confirmation.html">Orders</a>
+          <button id="logoutBtn" class="btn btn-danger" type="button">Logout</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page">
+      <!-- Welcome + quick intro -->
+      <section class="hero-card">
+        <p class="eyebrow">User Dashboard</p>
+        <h1 id="welcomeText">Welcome back!</h1>
+        <p class="subtext">View your activity, track deliveries, and manage your account in one place.</p>
+      </section>
+
+      <!-- Requested summary cards -->
+      <section class="stats-grid">
+        <article class="stat-card">
+          <span>Total Orders</span>
+          <strong id="totalOrders">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Cart Items</span>
+          <strong id="cartItemsCount">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Wishlist Items</span>
+          <strong id="wishlistItemsCount">0</strong>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <!-- Recent orders + order tracking status -->
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Recent Orders</h2>
+            <a class="btn btn-ghost" href="checkout.html">Buy Again</a>
+          </div>
+
+          <div id="ordersList" class="orders-list"></div>
+          <p id="emptyOrders" class="empty-text" hidden>No orders yet. Start shopping to place your first order.</p>
+        </section>
+
+        <!-- Profile section -->
+        <aside class="panel profile-panel">
+          <h2>Profile Information</h2>
+          <div class="profile-row">
+            <span>Full Name</span>
+            <strong id="profileName">-</strong>
+          </div>
+          <div class="profile-row">
+            <span>Email</span>
+            <strong id="profileEmail">-</strong>
+          </div>
+          <div class="profile-row">
+            <span>Member Since</span>
+            <strong id="profileSince">-</strong>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <!-- Footer to keep layout consistent with the site pages -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© 2026 CartLivo. All rights reserved.</p>
+        <p>Fast delivery • Secure checkout • Trusted products</p>
+      </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

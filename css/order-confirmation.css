@@ -1,0 +1,35 @@
+:root {
+  --bg: #060b08;
+  --surface: #0f1712;
+  --surface-soft: #121f18;
+  --text: #f5fff7;
+  --muted: #9eb9aa;
+  --primary: #19c46b;
+  --primary-dark: #0ea556;
+  --border: #234133;
+  --shadow: 0 16px 30px rgba(0, 0, 0, 0.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Inter",sans-serif;color:var(--text);background:radial-gradient(circle at top right,#0f1f18,#050805 55%)}
+.container{width:min(960px,calc(100% - 2rem));margin:0 auto}
+.topbar{border-bottom:1px solid var(--border);background:rgba(6,11,8,.9);backdrop-filter:blur(6px)}
+.topbar-inner{min-height:72px;display:flex;justify-content:space-between;align-items:center}
+.logo{text-decoration:none;color:var(--primary);font-size:1.35rem;font-weight:800}
+.page{padding:1.3rem 0 2rem}
+.confirmation-card{background:var(--surface);border:1px solid var(--border);border-radius:1rem;box-shadow:var(--shadow);padding:1.2rem}
+.eyebrow{display:inline-block;background:#133120;color:#8bffb9;border:1px solid #2f6a4b;border-radius:999px;padding:.25rem .7rem;font-size:.85rem;font-weight:600;margin-bottom:.7rem}
+.subtext{color:var(--muted);margin:.4rem 0 1rem}
+.meta-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem;margin-bottom:1rem}
+.meta-grid div{background:var(--surface-soft);border:1px solid var(--border);border-radius:.75rem;padding:.65rem}
+.meta-grid span{display:block;color:var(--muted);font-size:.85rem;margin-bottom:.15rem}
+.items-list{display:grid;gap:.6rem;margin:.65rem 0 1rem}
+.item{display:flex;justify-content:space-between;gap:.6rem;background:var(--surface-soft);border:1px solid var(--border);border-radius:.75rem;padding:.6rem}
+.item p{color:var(--muted);font-size:.88rem}
+.actions{display:flex;gap:.65rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:.85rem;padding:.66rem 1.1rem;text-decoration:none;font-weight:600;border:1px solid transparent;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn-primary{background:var(--primary);color:#031109}
+.btn-primary:hover{background:var(--primary-dark)}
+.btn-ghost{background:transparent;color:var(--text);border-color:var(--border)}
+.btn-ghost:hover{background:#173126}
+@media (max-width:700px){.meta-grid{grid-template-columns:1fr}.topbar-inner{flex-direction:column;align-items:flex-start;gap:.6rem;padding:.75rem 0}}

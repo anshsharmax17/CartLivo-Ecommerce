@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CartLivo | Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/auth.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="logo" href="index.html">CartLivo</a>
+        <a class="btn btn-ghost" href="index.html">Back to Store</a>
+      </div>
+    </header>
+
+    <main class="auth-layout container">
+      <section class="auth-card" aria-labelledby="loginHeading">
+        <p class="eyebrow">Welcome Back</p>
+        <h1 id="loginHeading">Login to Your Account</h1>
+        <p class="subtext">Continue shopping and manage your orders securely.</p>
+
+        <!-- Login form -->
+        <form id="loginForm" novalidate>
+          <!-- User/Admin switch -->
+          <div class="role-switch" role="radiogroup" aria-label="Login type">
+            <label>
+              <input type="radio" name="loginRole" value="user" checked />
+              <span>User Login</span>
+            </label>
+            <label>
+              <input type="radio" name="loginRole" value="admin" />
+              <span>Admin Login</span>
+            </label>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="john@example.com" required />
+            <small class="error" id="emailError"></small>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Enter password" required />
+            <small class="error" id="passwordError"></small>
+          </div>
+
+          <div class="auth-helpers">
+            <label class="remember-wrap">
+              <input type="checkbox" id="rememberMe" />
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="link-muted">Forgot password?</a>
+          </div>
+
+          <p id="formMessage" class="form-message" aria-live="polite"></p>
+
+          <button class="btn btn-primary btn-block" type="submit">Login</button>
+        </form>
+
+        <p class="bottom-text">
+          Don't have an account?
+          <a href="signup.html">Create one</a>
+        </p>
+      </section>
+    </main>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>

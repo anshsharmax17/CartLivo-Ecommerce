@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CartLivo | Admin Orders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/cart.css" />
+  </head>
+  <body class="admin-orders-body">
+    <header class="topbar admin-topbar">
+      <div class="container topbar-inner">
+        <a class="logo" href="admin-dashboard.html">CartLivo Admin</a>
+        <div class="topbar-actions">
+          <a class="btn btn-ghost" href="admin-dashboard.html">Dashboard</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container admin-layout">
+      <aside class="admin-sidebar">
+        <h2>Navigation</h2>
+        <nav class="admin-nav">
+          <a href="admin-dashboard.html">Dashboard</a>
+          <a href="#">Products</a>
+          <a class="active" href="admin-orders.html">Orders</a>
+          <a href="#">Users</a>
+          <a href="#">Analytics</a>
+        </nav>
+      </aside>
+
+      <section class="admin-content">
+        <section class="admin-panel">
+          <p class="eyebrow">Order Management</p>
+          <h1>Manage Customer Orders</h1>
+          <p class="admin-subtext">Track statuses, search orders, and inspect details in one place.</p>
+
+          <div class="filters-row">
+            <input id="searchOrders" type="search" placeholder="Search by Order ID or customer name" />
+            <select id="statusFilter">
+              <option value="all">All Status</option>
+              <option value="Pending">Pending</option>
+              <option value="Processing">Processing</option>
+              <option value="Shipped">Shipped</option>
+              <option value="Delivered">Delivered</option>
+              <option value="Cancelled">Cancelled</option>
+            </select>
+          </div>
+
+          <div class="table-wrap">
+            <table class="orders-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer Name</th>
+                  <th>Order Date</th>
+                  <th>Total Amount</th>
+                  <th>Order Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="ordersTableBody"></tbody>
+            </table>
+          </div>
+          <p id="emptyOrders" class="empty-row" hidden>No orders found for current filters.</p>
+        </section>
+      </section>
+    </main>
+
+    <!-- Details modal -->
+    <div id="detailsModal" class="modal" hidden>
+      <div class="modal-card">
+        <div class="modal-head">
+          <h2>Order Details</h2>
+          <button id="closeModal" class="btn btn-secondary" type="button">Close</button>
+        </div>
+        <div id="modalContent" class="modal-content"></div>
+      </div>
+    </div>
+
+    <script src="js/orders.js"></script>
+  </body>
+</html>

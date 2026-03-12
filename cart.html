@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CartLivo | Your Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/cart.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="logo" href="index.html">CartLivo</a>
+        <nav class="topbar-actions">
+          <a class="btn btn-ghost" href="products.html">Continue Shopping</a>
+          <a class="btn btn-primary">FAQ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container cart-page">
+      <section class="cart-main">
+        <div class="section-head">
+          <h1>Your Shopping Cart</h1>
+          <p id="itemCountLabel">0 items</p>
+        </div>
+
+        <!-- Cart item list gets rendered here by JS -->
+        <div id="cartItems" class="cart-items" aria-live="polite"></div>
+
+        <!-- Empty cart state -->
+        <section id="emptyCartState" class="empty-state" hidden>
+          <h2>Your cart is empty</h2>
+          <p>Add products to your cart to view them here.</p>
+          <a class="btn btn-primary" href="products.html">Continue Shopping</a>
+        </section>
+      </section>
+
+      <!-- Sticky order summary -->
+      <aside class="cart-summary" id="cartSummary">
+        <h2>Order Summary</h2>
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <strong id="summarySubtotal">₹0.00</strong>
+        </div>
+        <div class="summary-row">
+          <span>Estimated Tax (8%)</span>
+          <strong id="summaryTax">₹0.00</strong>
+        </div>
+        <div class="summary-row">
+          <span>Delivery Fee</span>
+          <strong id="summaryDelivery">₹0.00</strong>
+        </div>
+        <hr />
+        <div class="summary-row total-row">
+          <span>Total</span>
+          <strong id="summaryTotal">₹0.00</strong>
+        </div>
+
+        <button id="checkoutBtn" class="btn btn-primary btn-block" type="button">
+          Place Order
+        </button>
+      </aside>
+    </main>
+
+    <script src="js/cart.js"></script>
+  </body>
+</html>

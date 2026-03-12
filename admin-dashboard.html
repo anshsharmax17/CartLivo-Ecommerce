@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CartLivo | Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/admin-dashboard.css" />
+  </head>
+  <body>
+    <!-- Top navbar aligned to existing theme -->
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="logo" href="index.html">CartLivo Admin</a>
+        <div class="top-actions">
+          <a class="btn btn-ghost" href="dashboard.html">User Dashboard</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container layout">
+      <!-- Sidebar navigation -->
+      <aside class="sidebar panel">
+        <h2>Navigation</h2>
+        <nav class="side-nav">
+          <a class="active" href="#">Dashboard</a>
+          <a href="products.html">Products</a>
+          <a href="admin-orders.html">Orders</a>
+          <a href="admin-users.html">Users</a>
+          <a href="#">Analytics</a>
+        </nav>
+      </aside>
+
+      <section class="content">
+        <section class="hero panel">
+          <p class="eyebrow">Admin Overview</p>
+          <h1>E-commerce Performance Dashboard</h1>
+          <p class="subtext">Monitor sales, orders, product performance, and customer activity in real-time.</p>
+        </section>
+
+        <!-- Summary cards -->
+        <section class="cards-grid">
+          <article class="stat-card panel">
+            <span>Total Sales</span>
+            <strong id="totalSales">₹0</strong>
+          </article>
+          <article class="stat-card panel">
+            <span>Total Orders</span>
+            <strong id="totalOrders">0</strong>
+          </article>
+          <article class="stat-card panel">
+            <span>Total Users</span>
+            <strong id="totalUsers">0</strong>
+          </article>
+          <article class="stat-card panel">
+            <span>Total Products</span>
+            <strong id="totalProducts">0</strong>
+          </article>
+        </section>
+
+        <!-- Charts -->
+        <section class="charts-grid">
+          <article class="panel chart-card">
+            <h2>Monthly Sales</h2>
+            <canvas id="salesLineChart"></canvas>
+          </article>
+          <article class="panel chart-card">
+            <h2>Orders Trend</h2>
+            <canvas id="ordersBarChart"></canvas>
+          </article>
+          <article class="panel chart-card">
+            <h2>Category Distribution</h2>
+            <canvas id="categoryPieChart"></canvas>
+          </article>
+        </section>
+
+        <section class="data-grid">
+          <article class="panel">
+            <h2>Top Selling Products</h2>
+            <ul id="topProductsList" class="top-list"></ul>
+          </article>
+
+          <article class="panel">
+            <h2>Recent Orders</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="recentOrdersTableBody"></tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© 2026 CartLivo Admin Panel</p>
+        <p>Insights • Monitoring • Control</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/admin-dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CartLivo | Order Confirmation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/order-confirmation.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="logo" href="index.html">CartLivo</a>
+        <a class="btn btn-ghost" href="css/index.html">Continue Shopping</a>
+      </div>
+    </header>
+
+    <main class="container page">
+      <section class="confirmation-card">
+        <p class="eyebrow">Order Placed Successfully</p>
+        <h1>Thank you for your purchase 🎉</h1>
+        <p class="subtext">Your order has been confirmed and will be processed shortly.</p>
+
+        <div class="meta-grid">
+          <div><span>Order ID</span><strong id="orderId">-</strong></div>
+          <div><span>Order Date</span><strong id="orderDate">-</strong></div>
+          <div><span>Total Paid</span><strong id="orderTotal">₹0.00</strong></div>
+        </div>
+
+        <h2>Items Ordered</h2>
+        <div id="orderItems" class="items-list"></div>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="products.html">Shop More</a>
+          <a class="btn btn-ghost" href="cart.html">View Cart</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/order-confirmation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CartLivo | Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/checkout.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="logo" href="index.html">CartLivo</a>
+        <a class="btn btn-ghost" href="cart.html">Back to Cart</a>
+      </div>
+    </header>
+
+    <main class="container checkout-layout">
+      <section class="checkout-main">
+        <p class="eyebrow">Secure Checkout</p>
+        <h1>Complete Your Payment</h1>
+        <p class="subtext">Enter your shipping and payment details to place your order.</p>
+
+        <form id="checkoutForm" novalidate>
+          <h2>Shipping Details</h2>
+          <div class="grid-2">
+            <div class="field">
+              <label for="fullName">Full Name</label>
+              <input id="fullName" type="text" required />
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="address">Address</label>
+            <input id="address" type="text" required />
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label for="city">City</label>
+              <input id="city" type="text" required />
+            </div>
+            <div class="field">
+              <label for="postalCode">Postal Code</label>
+              <input id="postalCode" type="text" required />
+            </div>
+          </div>
+          <p id="checkoutMessage" class="checkout-message" aria-live="polite"></p>
+          <button class="btn btn-primary btn-block" type="submit">Pay Now</button>
+        </form>
+      </section>
+
+      <aside class="summary-card">
+        <h2>Order Summary</h2>
+        <div id="checkoutItems" class="checkout-items"></div>
+        <p id="emptyCartHint" class="empty-hint" hidden>Your cart is empty. Please add products first.</p>
+
+        <div class="summary-row"><span>Subtotal</span><strong id="subtotal">₹0.00</strong></div>
+        <div class="summary-row"><span>Tax (8%)</span><strong id="tax">₹0.00</strong></div>
+        <div class="summary-row"><span>Delivery</span><strong id="delivery">₹0.00</strong></div>
+        <hr />
+        <div class="summary-row total"><span>Total</span><strong id="total">₹0.00</strong></div>
+      </aside>
+    </main>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>
