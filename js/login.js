@@ -6,7 +6,7 @@
  * - redirects based on authenticated role
  */
 
-const API_BASE_URL = window.CartLivo_API_BASE_URL || "http://localhost:5000";
+const API_BASE_URL = "https://cartlivo-ecommerce.onrender.com";
 const REMEMBER_EMAIL_KEY = "rememberedEmail";
 const AUTH_TOKEN_KEY = "authToken";
 const CURRENT_USER_KEY = "currentUser";

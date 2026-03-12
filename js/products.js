@@ -5,7 +5,7 @@
  * - stores cart in localStorage for checkout flow
  */
 
-const API_BASE_URL = window.CartLivo_API_BASE_URL || "http://localhost:5000";
+const API_BASE_URL = "https://cartlivo-ecommerce.onrender.com";
 const CART_STORAGE_KEY = "cart";
 
 let products = [];

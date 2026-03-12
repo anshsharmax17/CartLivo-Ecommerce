@@ -7,7 +7,7 @@
  * - creates order after payment success
  */
 
-const API_BASE_URL = window.CartLivo_API_BASE_URL || "http://localhost:5000";
+const API_BASE_URL = "https://cartlivo-ecommerce.onrender.com";
 const AUTH_TOKEN_KEY = "authToken";
 const CART_STORAGE_KEY = "cart";
 const LATEST_ORDER_KEY = "latestOrderId";

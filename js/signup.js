@@ -5,7 +5,7 @@
  * - stores JWT + current user in localStorage
  */
 
-const API_BASE_URL = window.CartLivo_API_BASE_URL || "http://localhost:5000";
+const API_BASE_URL = "https://cartlivo-ecommerce.onrender.com";
 const AUTH_TOKEN_KEY = "authToken";
 const CURRENT_USER_KEY = "currentUser";
 const CURRENT_ADMIN_KEY = "currentAdmin";
