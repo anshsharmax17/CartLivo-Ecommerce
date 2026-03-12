@@ -1,4 +1,4 @@
-<img width="1902" height="926" alt="image" src="https://github.com/user-attachments/assets/7a33228b-447a-414a-b872-137e13abbdeb" /><img width="1902" height="926" alt="image" src="https://github.com/user-attachments/assets/7a33228b-447a-414a-b872-137e13abbdeb" />🛒 NovaCart – Full Stack E-Commerce Platform
+🛒 CartLivo – Full Stack E-Commerce Platform
 
 CartLivo is a full-stack e-commerce web application that allows users to browse products, add them to a cart, place orders, and make secure payments. It also includes an admin dashboard to manage products, users, and orders.
 
